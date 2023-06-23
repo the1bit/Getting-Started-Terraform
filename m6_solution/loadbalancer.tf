@@ -11,7 +11,7 @@ resource "aws_lb" "nginx" {
   subnets            = [aws_subnet.public_subnet1.id, aws_subnet.public_subnet2.id]
   depends_on         = [aws_s3_bucket_policy.web_bucket]
 
-  enable_deletion_protection = false
+  enable_deletion_protection = false 
 
   access_logs {
     bucket  = aws_s3_bucket.web_bucket.bucket

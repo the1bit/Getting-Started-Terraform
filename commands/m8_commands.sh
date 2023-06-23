@@ -26,3 +26,6 @@ $env:AWS_SECRET_ACCESS_KEY="YOUR_SECRET_ACCESS_KEY"
 # Update the deployment
 terraform plan -out m8.tfplan
 terraform apply m8.tfplan
+
+
+terraform plan -replace aws_lb.nginx -replace aws_lb_listener.nginx -out m8.tfplan
